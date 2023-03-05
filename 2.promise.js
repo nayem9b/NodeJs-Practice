@@ -10,9 +10,9 @@ const myPromise = new Promise((resolve, reject) => {
   }
 });
 
-Promise.then((res) => console.log("Found in then", res)).catch((err) =>
-  console.log("Found in catch", err)
-);
+Promise.then((res) => console.log("Found in then", res)).catch((err) => {
+  console.log("Found in catch", err);
+});
 // let userData = [];
 
 // for (let i = 0; i < userIds.length; i++) {
