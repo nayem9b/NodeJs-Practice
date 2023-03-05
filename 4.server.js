@@ -25,6 +25,18 @@ const server = http.createServer((req, res) => {
       }
     });
   }
+  if ((req.url = "/foo")) {
+    fs.writeFile("data.text", "You are writing in it now", (err) => {
+      if (err) {
+        console.log(err);
+        res.write("Failed to read data");
+        res.end();
+      } else {
+        res.write("data written successfully");
+        res.end();
+      }
+    });
+  }
 
   //   res.end("Hello from node.js server");
   //   if ((req.url = "/")) {
